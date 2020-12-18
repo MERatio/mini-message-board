@@ -1,8 +1,53 @@
-body {
-  padding: 50px;
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+*,
+*::before,
+*::after {
+	box-sizing: inherit;
+	padding: 0;
+	margin: 0;
 }
 
-a {
-  color: #00B7FF;
+body {
+	box-sizing: border-box;
+	font-family: Arial, Helvetica, sans-serif;
+	padding: 3rem;
+}
+
+.text-align-center {
+	text-align: center;
+}
+
+.flex-column-center {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.message-list {
+	list-style-type: none;
+	margin-top: 2rem;
+}
+
+.message-item {
+}
+
+.message-item:not(:first-child) {
+	margin-top: 1.4rem;
+}
+
+.message-info:not(:first-child) {
+	margin-top: 0.4rem;
+}
+
+.message-user {
+	font-size: 1.4rem;
+	font-weight: 700;
+}
+
+.message-added {
+	font-style: italic;
+	font-size: 0.9rem;
+}
+
+.message-text {
+	font-size: 1.2rem;
 }

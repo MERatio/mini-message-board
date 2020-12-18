@@ -1,5 +1,14 @@
 extends layout
 
 block content
-  h1= title
-  p Welcome to #{title}
+	header.text-align-center
+		h1 Welcome to #{title}
+	main
+		ul.message-list.flex-column-center
+			each message in messages
+				li.message-item
+					div
+						p.message-info.message-user #{message.user}
+						p.message-info.message-added 
+							| #{formatDistance(message.added, new Date(), { includeSeconds: true, addSuffix: true })}
+						p.message-info.message-text #{message.text}
