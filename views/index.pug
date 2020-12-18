@@ -3,6 +3,7 @@ extends layout
 block content
 	header.text-align-center
 		h1 Welcome to #{title}
+		a(href="/new" class="link") Add new message
 	main
 		ul.message-list.flex-column-center
 			each message in messages
