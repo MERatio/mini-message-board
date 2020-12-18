@@ -1,0 +1,9 @@
+extends layout
+
+block content
+	header.text-align-center
+		h1 New message
+		form(action="/new" method="POST" class="message-form flex-column-center")
+			input(type="text"  name="messageUser" class="message-form-tag message-form-user" placeholder="Your name")
+			textarea(name="messageText" class="message-form-tag message-form-text" placeholder="Enter a message")
+			input(type="submit" class="message-form-tag" value="Submit")
