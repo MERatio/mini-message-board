@@ -25,4 +25,10 @@ router.get('/', function (req, res, next) {
 	});
 });
 
+router.get('/new', function (req, res, next) {
+	res.render('form', {
+		title: 'Mini Message Board | New Message',
+	});
+});
+
 module.exports = router;
