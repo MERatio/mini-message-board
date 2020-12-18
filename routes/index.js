@@ -31,4 +31,15 @@ router.get('/new', function (req, res, next) {
 	});
 });
 
+router.post('/new', function (req, res, next) {
+	const { messageText, messageUser } = req.body;
+	const newMessage = {
+		text: messageText,
+		user: messageUser,
+		added: new Date(),
+	};
+	messages.push(newMessage);
+	res.redirect('/');
+});
+
 module.exports = router;
